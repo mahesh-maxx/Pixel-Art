@@ -4,24 +4,21 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-  var row,column,tableElem,rowElem,colElem;
-  row =$('#inputHeight').val();
-  column = $('#inputWeight').val();
-
-
+    var row,column,tableElem,rowElem,colElem;
+    row =$('#inputHeight').val();
+    column = $('#inputWeight').val();
+    tableElem = document.createElement('table');
     for (var i = 0; i < row; i++) {
-            // rowElem = document.createElement('tr');
+            rowElem = document.createElement('tr');
             for (var j = 0; j < column; j++) {
-                // colElem = document.createElement('td');
-                // rowElem.append(colElem);
-              $('tr').append( '<td>' + 'result' +  i + '</td>' );
-            }
-
-            // tableElem.append(rowElem);
+                colElem = document.createElement('td');
+                rowElem.append(colElem);
+              }
+            tableElem.append(rowElem);
         }
-
-        // document.body.append(tableElem);
+        $('#pixelCanvas').html(tableElem);
 };
 $('#submit').click(function x() {
-    makeGrid();
+
+      makeGrid();
 });
