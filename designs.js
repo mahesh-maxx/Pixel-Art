@@ -11,7 +11,6 @@ function makeGrid() {
 
     for (var i = 0; i < row; i++) {
             // rowElem = document.createElement('tr');
-            $('#pixelCanvas').append('<tr></tr>')
             for (var j = 0; j < column; j++) {
                 // colElem = document.createElement('td');
                 // rowElem.append(colElem);
