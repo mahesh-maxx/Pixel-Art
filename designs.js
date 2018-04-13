@@ -3,16 +3,12 @@ function makeGrid() {
     row =$('#inputHeight').val();
     column = $('#inputWeight').val();
     tableElem = document.createElement('table');
-    var att = document.createAttribute("id");
-    att.value = "Grid";
-    tableElem.setAttributeNode(att);
+    tableElem.setAttribute('id', 'Grid');
     for (var i = 0; i < row; i++) {
             rowElem = document.createElement('tr');
             for (var j = 0; j < column; j++) {
-                colElem = document.createElement('td')
-                var event = document.createAttribute("onClick");
-                event.value = "clickFn()";
-                colElem.setAttributeNode(event);
+                colElem = document.createElement('td');
+                colElem.setAttribute('onClick','clickFn()');
                 rowElem.append(colElem);
               }
             tableElem.append(rowElem);
