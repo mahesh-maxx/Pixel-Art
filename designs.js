@@ -18,7 +18,6 @@ function makeGrid() {
 $('#submit').click(function () {
   makeGrid();
 });
-f
 function clickFn() {
   $("#Grid td").click(function() {
             var colorValue = $('#colorPicker').val();
